@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.VoiceAssistant" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:statusBarColor">#090B12</item>
+        <item name="android:navigationBarColor">#090B12</item>
+    </style>
+</resources>

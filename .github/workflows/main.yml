@@ -21,22 +21,23 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-        - name: Install Gradle
-          run: |
-            sudo apt-get update
-            sudo apt-get install -y gradle
+      - name: Install Gradle
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gradle
 
-        - name: Generate Gradle wrapper
-          run: gradle wrapper --gradle-version 8.9
+      - name: Generate Gradle wrapper
+        run: |
+          gradle wrapper --gradle-version 8.7
 
-        - name: Make gradlew executable
-          run: chmod +x ./gradlew
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
 
-        - name: Build Debug APK
-          run: ./gradlew assembleDebug --stacktrace
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug --stacktrace
 
-        - name: Upload APK
-          uses: actions/upload-artifact@v4
-          with:
-            name: Basanti-debug-apk
-            path: app/build/outputs/apk/debug/app-debug.apk
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Basanti-debug-APK
+          path: app/build/outputs/apk/debug/*.apk

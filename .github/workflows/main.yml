@@ -24,7 +24,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9' 
-      - name: Create Android Manifest
+            - name: Create Android Manifest
         run: |
           mkdir -p app/src/main
           cat > app/src/main/AndroidManifest.xml <<'EOF'
@@ -47,7 +47,7 @@ jobs:
                   </activity>
               </application>
           </manifest>
-          EOF 
+          EOF
       - name: Build Debug APK
         run: gradle assembleDebug --stacktrace
 

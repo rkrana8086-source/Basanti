@@ -23,7 +23,7 @@ jobs:
       - name: Setup Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.9'
+          gradle-version: '8.9' 
       - name: Create Android Manifest
         run: |
           mkdir -p app/src/main
@@ -32,12 +32,12 @@ jobs:
           <manifest xmlns:android="http://schemas.android.com/apk/res/android">
               <uses-permission android:name="android.permission.RECORD_AUDIO" />
               <application
-                  android:theme="@android:style/Theme.Material.NoActionBar"
+                  android:theme="@android:style/Theme.Material.Light.NoActionBar"
                   android:label="Basanti"
                   android:allowBackup="false"
                   android:supportsRtl="true">
                   <activity
-                      android:name=".MainActivity"
+                      android:name="com.example.voiceassistant.MainActivity"
                       android:exported="true"
                       android:screenOrientation="portrait">
                       <intent-filter>
@@ -47,7 +47,7 @@ jobs:
                   </activity>
               </application>
           </manifest>
-          EOF
+          EOF 
       - name: Build Debug APK
         run: gradle assembleDebug --stacktrace
 

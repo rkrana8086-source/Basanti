@@ -1,10 +1,10 @@
 package com.example.voiceassistant
 
+import android.app.Activity
 import android.os.Bundle
 import android.widget.TextView
-import androidx.activity.ComponentActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,9 +14,11 @@ class MainActivity : ComponentActivity() {
         text.text = """
             BASANTI DIAGNOSTIC
 
-            App startup successful.
+            Startup OK
 
-            MainActivity is working.
+            Activity: android.app.Activity
+            Compose: NOT USED
+            AndroidX: NOT USED
         """.trimIndent()
 
         text.textSize = 22f

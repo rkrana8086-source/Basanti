@@ -8,23 +8,18 @@ class CrashApp : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        val oldHandler = Thread.getDefaultUncaughtExceptionHandler()
-
-        Thread.setDefaultUncaughtExceptionHandler { thread, throwable ->
+        Thread.setDefaultUncaughtExceptionHandler { _, throwable ->
 
             val report = """
                 BASANTI CRASH REPORT
-
-                Thread:
-                ${thread.name}
 
                 Exception:
                 ${throwable.javaClass.name}
 
                 Message:
-                ${throwable.message}
+                ${throwable.message ?: "No message"}
 
-                Stack:
+                Stack trace:
                 ${throwable.stackTraceToString()}
             """.trimIndent()
 
@@ -33,7 +28,12 @@ class CrashApp : Application() {
                 .putString("report", report)
                 .apply()
 
-            oldHandler?.uncaughtException(thread, throwable)
+            val intent = Intent(this, CrashReportActivity::class.java)
+            intent.addFlags(
+                Intent.FLAG_ACTIVITY_NEW_TASK or
+                Intent.FLAG_ACTIVITY_CLEAR_TASK
+            )
+            startActivity(intent)
         }
     }
 }

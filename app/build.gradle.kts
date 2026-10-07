@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
@@ -12,18 +11,7 @@ android {
         applicationId = "com.example.voiceassistant"
         minSdk = 24
         targetSdk = 35
-versionCode = 2
-versionName = "1.1"
+        versionCode = 3
+        versionName = "1.2"
     }
-}
-
-dependencies {
-    implementation("androidx.core:core-ktx:1.15.0")
-    implementation("androidx.activity:activity-compose:1.10.1")
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3:1.3.1")
-    implementation("androidx.compose.foundation:foundation:1.7.8")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.7")
-    debugImplementation("androidx.compose.ui:ui-tooling")
 }

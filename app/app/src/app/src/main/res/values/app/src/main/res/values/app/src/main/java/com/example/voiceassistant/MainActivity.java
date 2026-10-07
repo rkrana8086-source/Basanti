@@ -1,20 +1,19 @@
-package com.example.voiceassistant;
+package com.example.voiceassistant
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.TextView;
+import android.app.Activity
+import android.os.Bundle
+import android.widget.TextView
 
-public class MainActivity extends Activity {
+class MainActivity : Activity() {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-        TextView text = new TextView(this);
-        text.setText("BASANTI JAVA DIAGNOSTIC\n\nSTARTUP OK");
-        text.setTextSize(24);
-        text.setPadding(40, 80, 40, 40);
+        val text = TextView(this)
+        text.text = "BASANTI\n\nSTARTUP OK"
+        text.textSize = 28f
+        text.setPadding(40, 80, 40, 40)
 
-        setContentView(text);
+        setContentView(text)
     }
 }

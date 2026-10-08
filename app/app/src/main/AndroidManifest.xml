@@ -1,3 +1,57 @@
+Basanti
+Repository navigation
+Code
+Issues
+Pull requests
+Basanti/app/app/src/main
+/
+AndroidManifest.xml
+in
+main
+
+Edit
+
+Preview
+Indent mode
+
+Spaces
+Indent size
+
+4
+Line wrap mode
+
+No wrap
+Editing AndroidManifest.xml file contents
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
 <?xml version="1.0" encoding="utf-8"?>
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
@@ -28,3 +82,17 @@
     </application>
 
 </manifest>
+Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
+Commit changes
+There was an error committing your changes: rkrana8086-source has committed since you started editing. See what changed
+Commit message
+Update AndroidManifest.xml for app configuration
+Copilot commit message generated: Update AndroidManifest.xml for app configuration
+Extended description
+Removed audio recording permission and updated app label.
+Message and description suggested by Copilot.
+Direct commit or PR
+
+Commit directly to the main branch
+
+Create a new branch for this commit and start a pull request Learn more about pull requests
